@@ -1,0 +1,17 @@
+{
+  "name": "fusslp",
+  "version": "0.65.1",
+  "description": "This is just my blog portal",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "blogging",
+    "letter",
+    "php",
+    "codeigniter"
+  ],
+  "author": "Fahmi",
+  "license": "MIT"
+}

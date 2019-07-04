@@ -1,0 +1,327 @@
+@import url("https://fonts.googleapis.com/css?family=Oxygen:300,400|Playfair+Display:400,700|Pacifico");
+.document-editor {
+  border: 1px solid var(--ck-color-base-border);
+  border-radius: var(--ck-border-radius);
+  /* Set vertical boundaries for the document editor. */
+  max-height: 700px !important;
+  /* This element is a flex container for easier rendering. */
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-orient: vertical !important;
+  -webkit-box-direction: normal !important;
+      -ms-flex-flow: column nowrap !important;
+          flex-flow: column nowrap !important;
+}
+
+.document-editor__toolbar {
+  /* Make sure the toolbar container is always above the editable. */
+  z-index: 1 !important;
+  /* Create the illusion of the toolbar floating over the editable. */
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2) !important;
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.2) !important;
+  /* Use the CKEditor CSS variables to keep the UI consistent. */
+  border-bottom: 1px solid var(--ck-color-toolbar-border);
+}
+
+/* Adjust the look of the toolbar inside the container. */
+.document-editor__toolbar .ck-toolbar {
+  border: 0;
+  border-radius: 0;
+}
+
+/* Make the editable container look like the inside of a native word processor application. */
+.document-editor__editable-container {
+  padding: calc( 2 * var(--ck-spacing-large)) !important;
+  background: #7f8fa6 !important;
+  /* Make it possible to scroll the "page" of the edited content. */
+  overflow-y: scroll !important;
+}
+
+.document-editor__editable-container .ck-editor__editable {
+  /* Set the dimensions of the "page". */
+  width: 15.8cm !important;
+  min-height: 21cm !important;
+  min-width: 24.9% !important;
+  /* Keep the "page" off the boundaries of the container. */
+  padding: 1cm 2cm 2cm !important;
+  border: 1px lightgray solid !important;
+  border-radius: var(--ck-border-radius);
+  background: white !important;
+  /* The "page" should cast a slight shadow (3D illusion). */
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.1) !important;
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.1) !important;
+  /* Center the "page". */
+  margin: 0 auto !important;
+}
+
+/* Set the default font for the "page" of the content. */
+.document-editor .ck-content,
+.document-editor .ck-heading-dropdown .ck-list .ck-button__label {
+  font: 16px/1.6 "Oxygen", sans-serif !important;
+}
+
+/* Adjust the headings dropdown to host some larger heading styles. */
+.document-editor .ck-heading-dropdown .ck-list .ck-button__label {
+  line-height: calc( 1.7 * var(--ck-line-height-base) * var(--ck-font-size-base)) !important;
+  min-width: 6em !important;
+}
+
+/* Scale down all heading previews because they are way too big to be presented in the UI.
+Preserve the relative scale, though. */
+.document-editor .ck-heading-dropdown .ck-list .ck-button:not(.ck-heading_paragraph) .ck-button__label {
+  -webkit-transform: scale(0.8) !important;
+          transform: scale(0.8) !important;
+  -webkit-transform-origin: left !important;
+          transform-origin: left !important;
+}
+
+/* Set the styles for "Heading 1". */
+.document-editor .ck-content h2,
+.document-editor .ck-heading-dropdown .ck-heading_heading1 .ck-button__label {
+  font-size: 2.18em !important;
+  font-weight: normal !important;
+}
+
+.document-editor .ck-content h2 {
+  line-height: 1.37em !important;
+  padding-top: .342em !important;
+  margin-bottom: .142em !important;
+}
+
+/* Set the styles for "Heading 2". */
+.document-editor .ck-content h3,
+.document-editor .ck-heading-dropdown .ck-heading_heading2 .ck-button__label {
+  font-size: 1.75em !important;
+  font-weight: normal !important;
+  color: #009dff !important;
+}
+
+.document-editor .ck-heading-dropdown .ck-heading_heading2.ck-on .ck-button__label {
+  color: var(--ck-color-list-button-on-text) !important;
+}
+
+/* Set the styles for "Heading 2". */
+.document-editor .ck-content h3 {
+  line-height: 1.86em !important;
+  padding-top: .171em !important;
+  margin-bottom: .357em !important;
+}
+
+/* Set the styles for "Heading 3". */
+.document-editor .ck-content h4,
+.document-editor .ck-heading-dropdown .ck-heading_heading3 .ck-button__label {
+  font-size: 1.31em !important;
+  font-weight: bold !important;
+}
+
+.document-editor .ck-content h4 {
+  line-height: 1.24em !important;
+  padding-top: .286em !important;
+  margin-bottom: .952em !important;
+}
+
+/* Set the styles for "Paragraph". */
+.document-editor .ck-content p {
+  font-size: 1em !important;
+  line-height: 1.63em !important;
+  padding-top: .5em !important;
+  margin-bottom: 1.13em !important;
+}
+
+/* Make the block quoted text serif with some additional spacing. */
+.document-editor .ck-content blockquote {
+  font-family: "Playfair Display", serif;
+  margin-left: calc( 2 * var(--ck-spacing-large)) !important;
+  margin-right: calc( 2 * var(--ck-spacing-large)) !important;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: "Oxygen", sans-serif;
+  line-height: 1.45em;
+  background-color: #FFDF6E !important;
+}
+
+a {
+  text-decoration: none;
+  color: #353b48 !important;
+}
+
+.judul {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bolder;
+  font-style: italic;
+  font-size: 420%;
+}
+
+.btn-outline-putih {
+  color: #353b48 !important;
+  border: 2px solid #353b48 !important;
+  border-radius: 0;
+}
+
+.btn-outline-putih:hover {
+  background-color: #e4be36 !important;
+  color: #fff !important;
+  border-color: #857333;
+}
+
+.form-control {
+  color: #353b48 !important;
+  border-radius: 0rem;
+  background-color: transparent !important;
+  border: 0 solid transparent !important;
+  border-bottom: 2px solid #353b48 !important;
+}
+
+.dropdown-item {
+  background-color: #FFDF6E !important;
+  color: #353b48 !important;
+  padding-top: 0 !important;
+}
+
+.dropdown-item:hover {
+  background-color: #e4be36 !important;
+  color: #fff !important;
+  -webkit-transition: background-color 200ms ease-in-out;
+  transition: background-color 200ms ease-in-out;
+}
+
+.dropdown-menu {
+  background-color: #FFDF6E !important;
+  border: 2px solid #353b48 !important;
+  border-radius: 0;
+}
+
+.menulogin {
+  border-left: 2px solid #353b48 !important;
+}
+
+@media (max-width: 768px) {
+  .menulogin {
+    border-left: none !important;
+  }
+}
+
+.kepalablog {
+  height: 315px;
+  padding-top: 33px;
+  font-size: 85px;
+  font-weight: bold;
+  font-style: normal;
+  font-family: "Oxygen", sans-serif;
+  color: #FFDF6E !important;
+}
+
+.kepalablog h1 {
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic;
+}
+
+.kepalablog hr {
+  width: 30%;
+  border-color: #FFDF6E !important;
+}
+
+.link a {
+  text-decoration: none;
+  color: #353b48 !important;
+}
+
+hr {
+  border: 2px solid #353b48 !important;
+}
+
+.ngeblog {
+  color: #353b48 !important;
+  font-family: "Oxygen", sans-serif;
+  font-size: 14px;
+}
+
+.ngeblog .intro {
+  font-size: 16px;
+  margin: 0 auto 30px;
+}
+
+.ngeblog .intro h1 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 32px;
+  font-style: italic;
+  font-weight: bolder;
+  margin-bottom: 15px;
+  line-height: 1.55;
+  color: inherit;
+  margin-top: 20px;
+}
+
+.ngeblog .intro p {
+  color: #857333;
+  font-size: 12px;
+}
+
+.ngeblog .intro p .by {
+  font-style: italic;
+}
+
+.ngeblog .intro p .date {
+  text-transform: uppercase;
+  padding: 4px 0 4px 10px;
+  margin-left: 10px;
+  border-left: 1px solid #353b48 !important;
+}
+
+.ngeblog .intro p a {
+  color: #7f8fa6;
+  text-transform: lowercase;
+  font-style: italic;
+  padding-left: 3px;
+  text-decoration: none;
+}
+
+.ngeblog .intro img {
+  margin-top: 20px;
+}
+
+.ngeblog .text p {
+  margin-bottom: 20px;
+  line-height: 1.45;
+}
+
+@media (min-widh: 768px) {
+  .ngeblog .text p {
+    font-size: 16px;
+  }
+}
+
+.ngeblog .text h2 {
+  margin-top: 28px;
+  margin-bottom: 20px;
+  line-height: 1.45;
+  font-size: 16px;
+  font-weight: bold;
+  color: tcolors(dark);
+}
+
+@media (min-width: 768px) {
+  .ngeblog .text h2 {
+    font-size: 20px;
+  }
+}
+
+.ngeblog .text figure {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.ngeblog .text figure img {
+  margin-bottom: 12px;
+  max-width: 100%;
+}
+/*# sourceMappingURL=tema.css.map */

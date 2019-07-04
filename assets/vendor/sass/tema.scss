@@ -1,0 +1,104 @@
+@import '_variabel.scss';
+@import '_documenteditor.scss';
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: $font-samping;
+    line-height: 1.45em;
+    background-color: warna(primary);
+}
+
+a {
+    text-decoration: none;
+    color: warna(dark);
+}
+
+.judul {
+    font-family: $font-judul;
+    font-weight: bolder;
+    font-style: italic;
+    font-size: 420%;
+}
+
+.btn-outline-putih {
+    color: warna(dark);
+    border: 2px solid warna(dark);
+    border-radius: 0;
+
+    &:hover {
+        background-color: warna(secondary);
+        color: warna(putih);
+        border-color: warna(coklat);
+    }
+}
+
+.form-control {
+    color: warna(dark);
+    border-radius: 0rem;
+    background-color: transparent !important;
+    border: 0 solid transparent !important;
+    border-bottom: 2px solid warna(dark);
+}
+
+.dropdown-item {
+    background-color: warna(primary);
+    color: warna(dark);
+    padding-top: 0 !important;
+
+    &:hover {
+        background-color: warna(secondary);
+        color: warna(putih);
+        transition: background-color 200ms ease-in-out;
+    }
+}
+
+.dropdown-menu {
+    background-color: warna(primary);
+    border: 2px solid warna(dark);
+    border-radius: 0;
+}
+
+.menulogin {
+    border-left: 2px solid warna(dark);
+
+    @media (max-width: 768px) {
+        border-left: none !important;
+    }
+}
+
+.kepalablog {
+    height: 315px;
+    padding-top:33px;
+    font-size: 85px;
+    font-weight: bold;
+    font-style: normal;
+    font-family: $font-samping;
+    color: warna(primary);
+
+    h1 {
+        font-family: $font-judul;
+        font-style: italic;
+    }
+
+    hr {
+        width: 30%;
+        border-color: warna(primary);
+    }
+}
+
+.link {
+    a {
+        text-decoration: none;
+        color: warna(dark);
+    }
+}
+
+hr {
+    border: 2px solid warna(dark);
+}
+
+@import '_post.scss';

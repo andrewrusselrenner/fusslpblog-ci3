@@ -1,0 +1,31 @@
+// import font dari google font (fonts.google.com)
+@import url('https://fonts.googleapis.com/css?family=Oxygen:300,400|Playfair+Display:400,700|Pacifico');
+
+// warna tema blognya
+$warna-tema: (
+    primary: #FFDF6E !important,
+    secondary: rgb(228, 190, 54) !important,
+    light: #00a8ff !important,
+    putih: #fff !important,
+    coklat: rgb(133, 115, 51),
+    dark: #353b48 !important,
+    agakhitam: rgb(73, 69, 54) !important,
+    kepala: #f5f6fa,
+    abuabu: #7f8fa6
+);
+
+$enable-rounded: false !important;
+
+// Untuk memudahkan pemanggilan warna
+@function warna($nama-warna) {
+    @return map-get($warna-tema, $nama-warna)
+}
+
+$regular: 400;
+$light: 300;
+$bold: 700;
+
+$font-header: 'Pacifico', cursive;
+$font-post: 'Playfair Display', serif;
+$font-samping: 'Oxygen', sans-serif;
+$font-judul: 'Times New Roman', Times, serif;
