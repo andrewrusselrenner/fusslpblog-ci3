@@ -9,6 +9,13 @@ Instalasi
 Untuk instalasinya, dapat di clone atau download file zip `disini <https://codeigniter.com/user_guide/installation/index.html>`_ .
 Untuk berkas basis data SQL ada di folder assets dengan nama fusslpblog.sql. Tinggal impor saja melalui phpmyadmin.
 
+Untuk kredensial login:
+Author      Email                   Password
+Author 1 => fahmi@fusslp.com     /  buntu12345
+Author 2 => alya@mail.com        /  buntu12345
+Author 3 => wahyu@mail.com       /  buntu12345
+User Biasa => vanila@fusslp.com  /  buntu12345
+
 ###################
 Credit Team (MI2A/'17)
 ###################
